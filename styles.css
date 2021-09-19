@@ -1,0 +1,13 @@
+html {
+    font-size: 15px;
+    font-family:  monospace, sans-serif;
+  }
+  
+h1 {
+  background-color: rgb(236, 236, 236);
+  padding: 1em;
+}
+
+h2 {
+  font-size: 30px; 
+}
