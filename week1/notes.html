@@ -7,12 +7,37 @@
   </head>
   <body>
     <h1>WDD 330 Portfolio</h1>
-    <a href="./index.html">&lt; Week01</a>
-    <h2>Notes</h2>
+    <a href="./week01.html">&lt; Week01</a>
+    <h2>Readings</h2>
     <ul>
-      
+      <li>Doing Stuff with Web Things</li>
+      <li>Master Mobile UX video</li>
     </ul>
-  
+    <h2>Notes</h2>
+      <ul>
+        <h3>Master Mobile UX Notes</h3>
+        <li>"If you design for the smallest, least powerful device first, then you will
+          focus on the content, and your core functionality. That leads to simple,
+          beautiful apps.  If you do it the other way around, it'll be like trying to 
+          put a marshmallow into a piggy bank, which is neither simple, nor beautiful." - Joel Marsh
+        </li>
+        <h3>My Dynamic Linked list code</h3>
+        <li>
+          const links = [{label: "Week01",url: "week1/week01.html"}];<br>
+          let list = document.getElementById("tableOfContents");<br>
+          <br>
+          links.forEach((item)=>{<br>
+              let li = document.createElement("li");<br>
+              let a = document.createElement("a");<br>
+              a.href = item.url;<br>
+              a.innerText = item.label;<br>
+              li.appendChild(a);<br>
+              <br>
+              list.appendChild(li);<br>
+          });
+        </li>
+      </ul>
+    
 
   </body>
 </html>
