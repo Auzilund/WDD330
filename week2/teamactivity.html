@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>W02 TeamActivity</title>
+    </head>
+    <body>
+        <h1>Step 1</h1>
+        <form action="submit" title="submit">
+        <input type="text" id="textInput"><br><br>
+        <button type="button" id="textButton" value="Submit" 
+            onclick = "readForm()">Submit</button><br>
+        </form>
+        <div id="div1">
+            Output:
+        </div>
+        <h1>Step 2</h1>
+        <form action="submit" title="submit">
+            <input type="number" id="inputNum"><br><br>
+            <button type="button" id="addnumButton" value="submit" 
+                onclick = "addNum()">Submit</button><br><br>
+            <div id="div2">
+                Output:
+            </div>
+        </form>
+        <script>
+            function readForm(){
+                var inputData = document.getElementById("textInput").value;
+                const div1 = document.getElementById("div1");
+                div1.innerText = "Output: " + inputData;
+            }
+            function addNum(){
+                var inputNum = document.getElementById("inputNum").value;
+                var totalSum = 0;
+                for(let i=0; i<=inputNum; i++){
+                    totalSum += i;
+                }
+                const div2 = document.getElementById("div2");
+                div2.innerText = "Output: " + totalSum;
+            }
+        </script>
+    </body>
+</html>
