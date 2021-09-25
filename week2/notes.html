@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <h1>WDD 330 Portfolio</h1>
+    <a href="./week01.html">&lt; Week01</a>
+    <h2>Readings</h2>
+    <ul>
+      <li>Ch2: Programming basics</li>
+      <li>Ch3: Arrays, Logic, and Loops</li>
+      <li>Ch4: Functions</li>
+    </ul>
+    <h2>Notes</h2>
+      <ul>
+        <h3>Chapter 2</h3>
+        <li>// One liner comments are made by using the double slash.</li>
+        <li>/* Longer coments are written with a slash and<br>
+            asterisk and the same thing but in reverse at the end. */</li>
+        <li>There’s no need to actually use a semicolon to terminate a statement because<br>
+            JavaScript interpreters use a process called Automatic Semicolon Insertion (ASI).<br>
+            This will attempt to place semicolons at the end of lines for you.<br>
+            However, it will make a lot of mistakes so be sure to write each statement on a new line</li>
+        <li>Reserved JavaScript words:<br>
+            abstract, await, boolean, break, byte, case, catch, char,<br>
+            class, const, continue, debugger, default, delete, do,<br>
+            double, else, enum, export, extends, false, final, finally,<br>
+            float, for, function, goto, if, implements, import, in,<br>
+            instanceof, int, interface, let, long, native, new, null,<br>
+            package, private, protected, public, return, short, static,<br>
+            super, switch, synchronized, this, throw, throws, transient,<br>
+            true, try, typeof, var, volatile, void, while, with, yield
+            </li>
+        <li>JS has 7 datatypes, String, Symbol, Number, Boolean, Undefined, Null,<br>
+            Everything else is an Object.</li>
+        <li>Code example that uses prompt and alert:<br>
+            const question = "What is Superman's real name?"<br>
+            const answer = prompt(question);<br>
+            alert(`You answered ${answer}`);
+        </li>
+        <h3>Chapter 3</h3>
+        <li>
+            Array code Example:<br>
+            const cars = [];<br>
+            cars[0] = 'Ford';<br>
+            cars[1] = 'Toyota';<br>
+            cars[2] = 'Honda';<br>
+            delete cars[1]; // This will replace Toyota with "undefined".<br>
+            cars.length; // This will display a number corresponding to the number of items in an array.<br>
+            cars.pop(); // This will remove the last variable in the array.<br>
+            cars.shift(); // This will remove the first variable in the array.<br>
+            cars.push('Volkswagon'); // This will add a variable to the end of an array.<br>
+            cars.unshift('Volkswagon'); // This will add the variable to the front of the array.<br>
+            cars.concat(['Jeep', 'Subaru']); // This will combine the defined array with cars array.<br>
+            cars.join(' & '); // This will turn the array into a string.
+        </li>
+        <li>There are other examples such as reverse, sort, indexOf, includes and many others </li>
+        <li>Coordinates can be made with 2d arrays.</li>
+        <li>Sets are groups of individual characters or numbers.<br>
+            For example: const numbers = new Set([1,2,3]);</li>
+        <li>Sets can be converted to arrays by using the Array.from() method</li>
+        <li>Maps are a different structure similar to objects. Objects are limited to using strings<br>
+            as key values, whereas maps can use any data type.</li>
+        <h3>Chapter 4</h3>
+        <li>
+            There are three different types of functions in JS.  The team activity<br>
+            challenged us to make examples of all three.  Here are my examples:<br>
+            1. Declaration: function name()){ .... }<br>
+            2. Arrow Function: var funcName= () => oneliner function;<br>
+            3. Function Expressions: let funcName = function(){ ...}
+        </li>
+      </ul>
+    
+
+  </body>
+</html>
