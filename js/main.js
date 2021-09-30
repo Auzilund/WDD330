@@ -1,4 +1,4 @@
-const links = [{label: "Week01",url: "week1/week01.html"},{label: "Week02",url: "week2/week02.html"}];
+const links = [{label: "Week01",url: "week1/week01.html"},{label: "Week02",url: "week2/week02.html"},{label: "Week03",url: "week3/week03.html"}];
 let list = document.getElementById("tableOfContents");
 
 links.forEach((item)=>{
