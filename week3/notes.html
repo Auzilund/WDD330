@@ -1,0 +1,80 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 330 portfolio</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <h1>WDD 330 Portfolio</h1>
+        <a href="./week03.html">&lt; week03</a>
+        <h2>Readings</h2>
+        <ul>
+            <li>Object Methods</li>
+            <li>Ch5: Objects</li>
+            <li>Ch6: Document Object Model</li>
+            <li>Ch7: Events</li>
+        </ul>
+        <h2>Notes</h2>
+        <h3>Object Methos</h3>
+        <ul>
+            <li>Objects are created to represent entities of the real world.</li>
+            <li>JS Object Example:<br>
+                let user = { name: "John", age:30  };</li>
+            <li>With objects we can add object methods/actions through functions:<br>
+                user.sayHi = function() { alert("Hello"); };
+            </li>
+            <li>Methods can reference an object as 'this'</li>
+            <li>A function can be copied between objects</li>
+        </ul>
+        <h3>Chapter 5: Objects</h3>
+        <ul>
+            <li>Objects have properties that can be any JavaScript value.<br>
+                 If it’s a function, it’s known as a method.</li>
+            <li>The Math object can be used to perform mathematical calculations.</li>
+            <li>The Date object can be used to create date objects.</li>
+            <li>Using the getter methods, you can access info about that date.</li>
+            <li>The Regex object can be used to create regular expressions.</li>
+            <li>Regex expressions are objects that use the global.ignoreCase, and muliline properties.<br>
+                using the flags g, i, and m.</li>
+            <li>Objects can be created by simply assigning a value equal to curly braces {}<br>
+                Or they can be created using a constructor like = new Object();</li>
+            
+        </ul>
+        <h3>Chapter 6: DOM</h3>
+        <ul>
+            <li>The DOM allows access to elements of a web page and allows for interaction with the page.</li>
+            <li>DOM uses getters like getElementById, getElementsByClassName,<br>
+                getElementsByTagName,querySelector, and querySelectorAll.</li>
+            <li>The DOM treats everything on a web page as a node. HTML tags,<br>
+                the text inside these tags, even the attributes of a tag are all nodes.<br>
+                The HTML tag is the root node, and every other part of the document is a child node of this.</li>
+            <li>DOM will also store whitespace nodes as #text sections that can be referenced.</li>
+            <li>Document.body returns the body element of a web page</li>
+            <li>Document.imagesreturns a node list of all the images contained in the document.</li>
+            <li>Document.linksreturns a node list of all the 'a' elements and 'area' elements that have an href attribute.</li>
+            <li>Document.anchorsreturns a node list of all the 'a' elements that have a name attribute.</li>
+            <li>The parentNode(), previousSibling(), nextSibling(), childNodes() and children() methods can be used to navigate around the DOM tree.</li>
+            <li>Document.formsreturns a node list of all the forms in the document. </li>
+            <li>The getAttribute() method returns the value of the attribute provided as an argument.</li>
+            <li>There is also aclassNameproperty that allows the class of an element to be set directly.<br>
+                In addition, it can be used to find out the value of the class attribute</li>
+            <li>The innerHTMLproperty can be used to insert raw HTML directly into the DOM.</li>
+        </ul>
+        <h3>Chapter 7: Events</h3>
+        <ul>
+            <li>Events are another part of the DOM and they are what provides the link between the web page and user interactions.</li>
+            <li>The following code can be used to attach an event listener to the document that fires when the user clicks anywhere on the page:<br>
+                document.body.addEventListener("click", doSomething);</li>
+            <li>The 'click' event occurs when a user clicks with the mouse, presses the Enter key, or taps the screen,<br>
+                making it a very useful all-round event covering many types of interaction.</li>
+            <li>The addEventListener() method can also be called without a node, in which case it is applied to the global object, usually the whole browser window.</li>
+            <li>There are many types of event, including mouse events, keyboard events, and touch events.</li>
+            <li>You can remove an event using the removeEventListener method.</li>
+            <li>Event delegation is when an event listener is added to a parent element to capture events that happen to its children elements.</li>
+        </ul>
+        <h3>Examples</h3>
+        <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+        <p id="demo"></p>        
+    </body>
+</html>
