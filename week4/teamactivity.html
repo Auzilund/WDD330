@@ -3,16 +3,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tic-Tac-Toe Board</title>
-        <a href="week04.html">&lt; week04</a>
+        <!-- <a href="week04.html">&lt; week04</a> -->
         <style>
             .board {
                 width: 400px;
                 height: 400px;
-                margin: auto;
+                table-layout: fixed;
             }
             .board tr {
-                width: 33%;
-                height: 33%;
+                width: 33.3%;
+                height: 33.3%;
             }
             .board td {
                 text-align: center;
@@ -45,19 +45,19 @@
     <body class="body">
         <table class="board">
             <tr>
-                <td>O</td>
-                <td class= "vertical">O</td>
-                <td>X</td>
+                <td></td>
+                <td class= "vertical"></td>
+                <td></td>
             </tr>
             <tr>
-                <td class="horizontal">X</td>
-                <td class= "vertical horizontal">X</td>
-                <td class="horizontal">O</td> 
+                <td class="horizontal"></td>
+                <td class= "vertical horizontal"></td>
+                <td class="horizontal"></td> 
             </tr>
             <tr>
-                <td>O</td>
-                <td class= "vertical">O</td>
-                <td>X</td>
+                <td></td>
+                <td class= "vertical"></td>
+                <td></td>
             </tr>
         </table>
         <button class="button" id="reset">Reset</button>
