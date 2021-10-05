@@ -1,0 +1,65 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic-Tac-Toe Board</title>
+        <a href="week04.html">&lt; week04</a>
+        <style>
+            .board {
+                width: 400px;
+                height: 400px;
+                margin: auto;
+            }
+            .board tr {
+                width: 33%;
+                height: 33%;
+            }
+            .board td {
+                text-align: center;
+                font-size: 6em;
+            }
+            .horizontal {
+                border-top: 3px solid black;
+                border-bottom: 3px solid black;
+            }
+            .vertical {
+                border-left: 3px solid black;
+                border-right: 3px solid black;
+            }
+            .button {
+                background-color: grey;
+                border-radius:.2em;
+                transition: all 0.2s;
+                color: white;
+                font-size: 2em;
+                border:0.1em solid #494848;
+            }
+            .button:hover{
+                color: #000000;
+            }
+            .body {
+                background-color: rgb(197, 198, 209);
+            }
+        </style>
+    </head>
+    <body class="body">
+        <table class="board">
+            <tr>
+                <td>O</td>
+                <td class= "vertical">O</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td class="horizontal">X</td>
+                <td class= "vertical horizontal">X</td>
+                <td class="horizontal">O</td> 
+            </tr>
+            <tr>
+                <td>O</td>
+                <td class= "vertical">O</td>
+                <td>X</td>
+            </tr>
+        </table>
+        <button class="button" id="reset">Reset</button>
+    </body>
+</html>
