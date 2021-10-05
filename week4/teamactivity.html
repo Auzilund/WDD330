@@ -3,30 +3,38 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tic-Tac-Toe Board</title>
-        <!-- <a href="week04.html">&lt; week04</a> -->
+        <a href="week04.html">&lt; week04</a>
         <style>
             .board {
                 width: 400px;
                 height: 400px;
+                /* Force the table to stay the same size */
                 table-layout: fixed;
+                /* Get rid of space between table elements */
+                border-collapse: collapse;
             }
             .board tr {
+                /* Set each td to 1/3 of the table length */
                 width: 33.3%;
                 height: 33.3%;
             }
             .board td {
+                /* Place each x or o in the center of the cell */
                 text-align: center;
                 font-size: 6em;
             }
+            /* Horizontal border class makes top and bottom lines */
             .horizontal {
                 border-top: 3px solid black;
                 border-bottom: 3px solid black;
             }
+            /* Vertical border class makes Left and right lines */
             .vertical {
                 border-left: 3px solid black;
                 border-right: 3px solid black;
             }
-            .button {
+            /* Extra fancy reset button class */
+            .reset {
                 background-color: grey;
                 border-radius:.2em;
                 transition: all 0.2s;
@@ -34,9 +42,10 @@
                 font-size: 2em;
                 border:0.1em solid #494848;
             }
-            .button:hover{
+            .reset:hover{
                 color: #000000;
             }
+            /* background color for body */
             .body {
                 background-color: rgb(197, 198, 209);
             }
@@ -45,21 +54,111 @@
     <body class="body">
         <table class="board">
             <tr>
-                <td></td>
-                <td class= "vertical"></td>
-                <td></td>
+                <td id="tl" onclick="userClick(this.id)" ontouchend="userClick(this.id)"> </td>
+                <td id="tm" class= "vertical" onclick="userClick(this.id)" ontouchend="userClick(this.id)"> </td>
+                <td id="tr" onclick="userClick(this.id)" ontouchend="userClick(this.id)"> </td>
             </tr>
             <tr>
-                <td class="horizontal"></td>
-                <td class= "vertical horizontal"></td>
-                <td class="horizontal"></td> 
+                <td id="ml" class="horizontal" onclick="userClick(this.id)" ontouchend="userClick(this.id)"> </td>
+                <td id="mm" class= "vertical horizontal" onclick="userClick(this.id)" ontouchend="userClick()"> </td>
+                <td id="mr"class="horizontal" onclick="userClick(this.id)" ontouchend="userClick(this.id)"> </td> 
             </tr>
             <tr>
-                <td></td>
-                <td class= "vertical"></td>
-                <td></td>
+                <td id="bl" onclick="userClick(this.id)" ontouchend="userClick(this.id)"> </td>
+                <td id="bm" class= "vertical" onclick="userClick(this.id)" ontouchend="userClick(this.id)"> </td>
+                <td id="br" onclick="userClick(this.id)" ontouchend="userClick(this.id)"> </td>
             </tr>
         </table>
-        <button class="button" id="reset">Reset</button>
+        <button class="reset" id="reset" onclick="resetBoard()" ontouchend="resetBoard()">Reset</button>
+        <script>
+            const p1 = "X";
+            const p2 = "O";
+            let turn = p1;
+            let count = 0;
+            function userClick(id) {
+                let tabledata = document.getElementById(id);
+                if (tabledata.innerText == ""){
+                    tabledata.innerText = turn;
+                }
+                else{
+                    return;
+                }   
+                
+                if(turn == p1){
+                    turn = p2;
+                }
+                else{
+                    turn = p1;
+                }
+                checkWin()
+                count++;
+                if(count > 8){
+                    alert("It's a Draw!")
+                }
+            }
+            function resetBoard() {
+                let tl = document.getElementById("tl");
+                tl.innerText = " ";
+                let tm = document.getElementById("tm");
+                tm.innerText = " ";
+                let tr = document.getElementById("tr");
+                tr.innerText = " ";
+                let ml = document.getElementById("ml");
+                ml.innerText = " ";
+                let mm = document.getElementById("mm");
+                mm.innerText = " ";
+                let mr = document.getElementById("mr");
+                mr.innerText = " ";
+                let bl = document.getElementById("bl");
+                bl.innerText = " ";
+                let bm = document.getElementById("bm");
+                bm.innerText = " ";
+                let br = document.getElementById("br");
+                br.innerText = " ";
+                turn = p1;
+                count = 0;
+            }
+            function checkWin() {
+                let tl = document.getElementById("tl");
+                let tm = document.getElementById("tm");
+                let tr = document.getElementById("tr");
+                let ml = document.getElementById("ml");
+                let mm = document.getElementById("mm");
+                let mr = document.getElementById("mr");
+                let bl = document.getElementById("bl");
+                let bm = document.getElementById("bm");
+                let br = document.getElementById("br");
+                // lv
+                checkCombo(tl.innerText,ml.innerText,bl.innerText);
+                // mv
+                checkCombo(tm.innerText,mm.innerText,bm.innerText);
+                //rv
+                checkCombo(tr.innerText,mr.innerText,br.innerText);
+                //th
+                checkCombo(tl.innerText,tm.innerText,tr.innerText);
+                //mh
+                checkCombo(ml.innerText,mm.innerText,mr.innerText);
+                //bh
+                checkCombo(bl.innerText,bm.innerText,br.innerText);
+                //td
+                checkCombo(tl.innerText,mm.innerText,br.innerText);
+                //bd
+                checkCombo(tr.innerText,mm.innerText,bl.innerText);
+                
+                
+            }
+            function checkCombo(a,b,c){
+                if(a == "X" && b == "X" && c == "X"){
+                    alert("X Wins!");
+                    count = 0;
+                    
+                }
+                else if(a == "O" && b == "O" && c == "O"){
+                    alert("O Wins!");
+                    count = 0;
+                }
+            }
+            
+        </script>
     </body>
 </html>
