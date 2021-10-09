@@ -1,0 +1,116 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 330 portfolio</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <h1>WDD 330 Portfolio</h1>
+        <a href="week04.html">&lt; week04</a>
+        <h2>Readings</h2>
+        <ul>
+            <li>Ch8: Forms</li>
+            <li>Ch 12: Object Oriented Programming</li>
+            <li>Ch15: Modular JS</li>
+        </ul>
+        <h2>Notes</h2>
+        <h3>Forms</h3>
+        <ul>
+            <li>Forms are the primary method used for entering data into a browser.</li>
+            <li>document.forms will return an HTML collection of all the forms on a page.</li>
+            <li>form.elementswill return an HTML collection of all the elements contained within a form.</li>
+            <li>Forms havefocus,blur, andchangeevents that fire as a user interacts with the form.</li>
+            <li>Forms also have asubmitevent that can be used to intercept a form before it’s been submitted.</li>
+        </ul>
+        <h4>Form Examples</h4>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <button type="button" onclick="displayName()">Submit</button>
+          </form>
+        <div id="div1">
+        </div>
+        <form>
+            <p>Radio button example<p>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+          </form>
+          <form>
+            <p>Checkbox example<p></p>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+          </form>
+        <h3>Object Oriented Programming</h3>
+        <ul>
+            <li>Object-oriented programming (OOP) is a way of programming that uses<br>
+                objects that encapsulate their own properties and methods.</li>
+            <li>All instances of a class or constructor function inherit all <br>
+                the properties and methods of its prototype.</li>
+            <li>Inside a constructor function or class declaration, the <br>
+                keyword "this" refers to the object returned by the function.</li>
+            <li>Methods can be borrowed from other objects.</li>
+        </ul>
+        <p>Dice Roller Object Example</p>
+        <p id="placeholder">
+  
+        </p>
+        <button id="button">Roll Dice</button>
+        <h3>Modular JavaScript</h3>
+        <ul>
+            <li>jQuery and Lodash are two popular libraries that provide a large number of useful and well-tested functions.</li>
+            <li>npm and Yarn are package managers that can be used to install JavaScript packages,<br>
+                as well as any dependencies that they require.</li>
+            <li>The MVC pattern is used to organize code into distinct sections that are responsible for different elements of an application.</li>
+            <li>iles can be compressed on the server using the gzip compression tool.</li>
+            <li>Before code is deployed, it should be concatenated into a single file, minified and compressed.<br>
+                The script tag should be placed just before the closing "body" tag to ensure that all elements on the page have loaded before the script runs.</li>
+        </ul>
+        <p>Json Display data example</p>
+        <div id="div2">
+        </div>
+        <script>
+            function displayName() {
+                let fname = document.getElementById("fname").value;
+                let lname = document.getElementById("lname").value;
+                let div = document.getElementById("div1");
+                div.innerHTML = "Hello " + fname + " " + lname;
+            }
+            var dice = {
+                sides: 6,
+                roll: function () {
+                    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+                    return randomNumber;
+                }
+            }
+            function printNumber(number) {
+                var placeholder = document.getElementById('placeholder');
+                placeholder.innerHTML = number;
+            }
+
+            var button = document.getElementById('button');
+
+                button.onclick = function() {
+                var result = dice.roll();
+                printNumber(result);
+            };
+            var jsonVar = {
+                text: "example",
+                number: 1
+            };
+            var jsondata = document.getElementById("div2")
+            var jsonStr = JSON.stringify(jsonVar);
+            jsondata.innerText = jsonStr;
+        </script>
+    </body>
+</html>
