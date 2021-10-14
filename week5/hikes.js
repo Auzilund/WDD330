@@ -59,16 +59,18 @@ function renderOneHike(hike) {
         <div class="flex-container">
                 <div>
                     <h2>${hike.name}</h2>
-                    <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}" align="left" hspace="50">
+                    <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}" align="left" vspace=”50” hspace="50">
                     <h3>Distance</h3>
                     <p>${hike.distance}</p>
                     <h3>Difficulty</h3>
-                    <p>${hike.difficulty}</p><br><br><br>
+                    <p>${hike.difficulty}</p>
+                    <div>
                     <details>
-                      <summary class="collapsible">Description</summary>
+                      <summary>More</summary>
                         <p>${hike.description}</p>
                         <p>${hike.directions}</p>
                     </details>
+                    </div>
                 </div>
         </div>`;
 

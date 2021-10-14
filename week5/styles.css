@@ -7,6 +7,7 @@ body {
   }
   img {
     max-width: 50%;
+
   }
 .flex-container {
 display: flex;
@@ -31,23 +32,5 @@ h1 {
 }
 h2 {
   background-color: rgb(163, 163, 163);
-  padding: 10px;
   text-align: center;
-}
-
-h3 {
-  padding: 10px;
-}
-
-.collapsible:hover {
-  background-color: rgb(163, 163, 163);
-}
-.collapsible {
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 30px;
 }
