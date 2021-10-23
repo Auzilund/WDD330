@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo List</title>
+  </head>
+  <body>
+    <a href="week06.html">&lt; week06</a>
+    <h1>Todo List</h1>
+    <form  class="form-inline" action="#">
+      <input type="text" name="item" iD="item" placeholder="Add New">
+      <button class="color-change"id="add">+</button>
+    </form>
+    <div class="container">
+      <ul id="list"></ul>
+    </div>
+    <div class="button">
+      <button class="color-change" onclick="clearStorage()",>Clear</button>
+    </div>
+    <input class="search" type="text" name="filter" id="search" placeholder="Filter Search..">
+    
+    <label>
+      <input class="checkbox" type="checkbox" id="checkbox" onchange="filterCompleted(this)"/>Filter Completed
+    </label>
+    
+    <script src="todoApp.js"></script>
+  </body>
+</html>
