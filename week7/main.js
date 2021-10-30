@@ -64,7 +64,7 @@ function getWeatherData(city) {
 
     });
 
-    httpRequest.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0a79478b0f5666a9fbd034668255062d`);
+    httpRequest.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=YOUR-API-KEY`);
     httpRequest.send();
 }
 
