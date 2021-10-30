@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 330 portfolio</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <h1>WDD 330 Portfolio</h1>
+        <a href="week07.html">&lt; week07</a>
+        <h2>Readings</h2>
+        <ul>
+            <li>Ch11: Further Functions</li>
+            <li>Ch13: AJAX</li>
+        </ul>
+        <h2>Notes</h2>
+        <h3>Further Functions</h3>
+        <Ul>
+            <li>Functions are able to dynamically redefine themselves in the body of the function,<br>
+            depending on certain conditions.</li>
+            <li>A recursive function will keep invoking itself until a certain condition is met.</li>
+            <li>A callback is a function that’s provided as an argument to another function.</li>
+            <li>Callbacks are frequently used in asynchronous programming as part of the event loop. <br>
+                This means that a program can continue to run in a single thread while waiting for <br>
+                another task to be completed.</li>
+            <li>Promises can be used instead of callbacks to deal with multiple asynchronous actions<br>
+                in sequence. They also provide a nicer mechanism for handling errors.</li>
+            <li>Functions that return other functions are known as higher-order functions.</li>
+            <li>A closure is the process of keeping a reference to a variable available outside the <br>
+                scope of the function it was originally defined in.</li>
+            <li>A generator is created by placing an asterisk character (*) after the function keyword.</li>
+            <li>Pure functions are functions that don't rely on the state of the code they are called <br>
+                from, have no side-effects, and always give the same result when given the same arguments <br>
+                (referential transparency).</li>
+            <li>Functional programming involves breaking processes down into steps that can be applied as <br>
+                a series of functions.</li>
+        </Ul>
+        <h4>Examples</h4>
+        <p>const arrayOfNumbers = [1, 2, 3, 4];<br>
+        <br>
+        const sum = arrayOfNumbers.reduce((accumulator, currentValue) => {<br>  
+          return accumulator + currentValue;<br>
+        });<br>
+         
+        console.log(sum);
+        </p><br>
+        <p>
+            const finalParticipants = ['Taylor', 'Donald', 'Don', 'Natasha', 'Bobby'];<br>
+            <br>
+            const announcements = finalParticipants.map(member => {<br>
+              return member + ' joined the contest.';<br>
+            })<br>
+             
+            console.log(announcements);</p>
+
+        <h3>AJAX</h3>
+        <ul>
+            <li>Ajax is a technique for sending and receiving data asynchronously in the background.</li>
+            <li>The data can be sent in many forms, but it is usually in JSON.</li>
+            <li>Ajax can be used for making partial page updates without having to do a full page reload.</li>
+            <li>Ajax can be used for communicating with external APIs.</li>
+            <li>Ajax requests can be made using the Fetch API.</li>
+            <li>The Response interface allows you to control the response received from a request or to create <br>
+                your own response objects.</li>
+            <li>The Request interface allows you to create a request object that contains information about the <br>
+                request being made, such as the URL and headers.</li>
+            <li>The Headers interface allows you to create HTTP headers that can be added to a request or response <br>
+                object.</li>
+            <li>Requests can retrieve data using a GET request, or send data using a POST request.</li>
+            <li>The FormData interface makes it easier to send data from forms.</li>
+        </ul>
+        <h4>Check out this Weather App</h4>
+        <li><a href="weatherapp.html">Weather App</a></li>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
