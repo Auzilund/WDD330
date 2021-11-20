@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 330 portfolio</title>
+        <link rel="stylesheet" href="/styles.css">
+        <script>
+            function validateForm() {
+              let x = document.forms["myForm"]["fname"].value;
+              if (x == "") {
+                alert("Name must be filled out");
+                return false;
+              }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>WDD 330 Portfolio</h1>
+        <a href="week10.html">&lt; week10</a>
+        <h2>Readings</h2>
+        <ul>
+            <li>MDN: Validating forms</li>
+            <li>MDN: Using Fetch</li>
+        </ul>
+        <h2>Notes</h2>
+        <h3>Validating Forms</h3>
+        <ul>
+            <li>When you enter data, the browser and/or the web server will check to see<br>
+                that the data is in the correct format and within the constraints set by <br>
+                the application. Validation done in the browser is called client-side <br>
+                validation, while validation done on the server is called server-side <br>
+                validation. In this chapter we are focusing on client-side validation.</li>
+            <li>Built-in form validation uses HTML5 form validation features, which we've <br>
+                discussed in many places throughout this module. This validation generally <br>
+                doesn't require much JavaScript. Built-in form validation has better <br>
+                performance than JavaScript, but it is not as customizable as JavaScript <br>
+                validation.</li>
+            <li>JavaScript validation is coded using JavaScript. This validation is <br>
+                completely customizable, but you need to create it all (or use a library).</li>
+        </ul>
+        <h4>Examples</h4>
+        <h5>JS Validation</h5>
+        <form name="myForm" action="" onsubmit="return validateForm()">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <h5>Automatic HTML Validation</h5>
+        <form action="">
+        <input type="text" name="fname" required>
+        <input type="submit" value="Submit">
+        </form>
+        <p>If you click submit, without filling out the text field,<br>
+            your browser will display an error message.</p>
+
+        <h3>Using Fetch</h3>
+        <ul>
+            <li>The Fetch API provides a JavaScript interface for accessing and manipulating <br>
+                parts of the HTTP pipeline, such as requests and responses. It also provides <br>
+                a global fetch() method that provides an easy, logical way to fetch resources <br>
+                asynchronously across the network.</li>
+            <li>The Promise returned from fetch() won’t reject on HTTP error status even if <br>
+                the response is an HTTP 404 or 500. Instead, as soon as the server responds <br>
+                with headers, the Promise will resolve normally (with the ok property of the <br>
+                response set to false if the response isn’t in the range 200–299), and it will <br>
+                only reject on network failure or if anything prevented the request from completing.</li>
+            <li>fetch() won’t send cross-origin cookies unless you set the credentials init option.</li>
+        </ul>
+    </body>
+</html>
