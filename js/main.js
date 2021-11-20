@@ -7,7 +7,8 @@ const links = [
 {label: "Week06",url: "week6/week06.html"},
 {label: "Week07",url: "week7/week07.html"},
 {label: "Week08",url: "week8/week08.html"},
-{label: "Week09",url: "week9/week09.html"}
+{label: "Week09",url: "week9/week09.html"},
+{label: "Week10",url: "week10/week10.html"}
 ];
 let list = document.getElementById("tableOfContents");
 
