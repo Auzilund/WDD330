@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Gun Customization</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body { 
+                margin: 0; 
+                background-image: url('background.jpg');
+            }
+			canvas {
+                width: 100%; height: 100%;
+            }
+            .grabbable {
+                cursor: move;
+                cursor: grab;
+                cursor: -moz-grab;
+                cursor: -webkit-grab;
+            }
+
+            .grabbable:active {
+                cursor: grabbing;
+                cursor: -moz-grabbing;
+                cursor: -webkit-grabbing;
+            }
+		</style>
+    </head>
+    <body></body>
+        <canvas id="glCanvas" class="grabbable"></canvas>
+        
+        
+        
+        <script src="./threejs/three.min.js"></script>
+        <script src="./threejs/GLTFLoader.js"></script>
+        <script src="./threejs/OrbitControls.js"></script>
+        <script src="loadgun.js"></script>
+    </body>
+</html>
